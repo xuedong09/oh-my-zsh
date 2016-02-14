@@ -14,7 +14,7 @@ typeset -A host_repr
 host_repr=('dieter-ws-a7n8x-arch' "%{$fg_bold[green]%}ws" 'dieter-p4sci-arch' "%{$fg_bold[blue]%}p4")
 
 # user part, color coded by privileges
-local user="%(!.%{$fg[blue]%}.%{$fg[red]%})%n%{$reset_color%}"
+local user="%(!.%{$fg[green]%}.%{$fg[red]%})%n%{$reset_color%}"
 
 # Hostname part.  compressed and colorcoded per host_repr array
 # if not found, regular hostname in default color
