@@ -37,7 +37,9 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 
 #change by xd: use absolute path
 local pwd="%{$terminfo[bold]$fg[green]%} %~%{$reset_color%}"
-PROMPT='${user}${pwd}$(git_prompt_short_sha)$(git_prompt_info)$(git_prompt_status)%{$reset_color%} '
+PROMPT='
+${user}${pwd}$(git_prompt_short_sha)$(git_prompt_info)$(git_prompt_status)%{$reset_color%}
+> '
 
 
 # elaborate exitcode on the right when >0
