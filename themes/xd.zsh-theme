@@ -20,6 +20,7 @@ local user="%(!.%{$fg[green]%}.%{$fg[red]%})%n%{$reset_color%}"
 # if not found, regular hostname in default color
 local host="@${host_repr[$HOST]:-$HOST}%{$reset_color%}"
 
+#local host="%$host{$fg[green]%}"
 # author: xd move from smt
 ZSH_THEME_GIT_PROMPT_ADDED="%{$fg_bold[green]%}✚"
 ZSH_THEME_GIT_PROMPT_MODIFIED="%{$fg_bold[blue]%}✹"
@@ -38,7 +39,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 #change by xd: use absolute path
 local pwd="%{$terminfo[bold]$fg[green]%} %~%{$reset_color%}"
 PROMPT='
-${user}${pwd}$(git_prompt_short_sha)$(git_prompt_info)$(git_prompt_status)%{$reset_color%}
+${user}%{$fg[magenta]%}@%{$fg[yellow]%}%m${pwd}$(git_prompt_short_sha)$(git_prompt_info)$(git_prompt_status)%{$reset_color%}
 > '
 
 
